@@ -1,0 +1,12 @@
+
+*.lock
+
+Pods/*
+
+*.xcbkptlist
+
+*.xcworkspacedata
+
+*.xcsettings
+
+testS3Upload/STMCredentials.h

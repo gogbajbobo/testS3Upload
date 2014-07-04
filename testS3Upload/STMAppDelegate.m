@@ -7,13 +7,20 @@
 //
 
 #import "STMAppDelegate.h"
+#import <AWSiOSSDKv2/AWSCore.h>
+#import "STMCredentials.h"
 
 @implementation STMAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    AWSStaticCredentialsProvider *credentialsProvider = [AWSStaticCredentialsProvider credentialsWithAccessKey:ACCESSKEY secretKey:SECRETKEY];
+    AWSServiceConfiguration *configuration = [AWSServiceConfiguration configurationWithRegion:AWSRegionEUWest1 credentialsProvider:credentialsProvider];
+    [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
+
+    
     return YES;
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
