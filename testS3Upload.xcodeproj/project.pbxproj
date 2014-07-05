@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C76A5CB19680680004D6D80 /* AWXMLRequestSerializerFixed.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C76A5CA19680680004D6D80 /* AWXMLRequestSerializerFixed.m */; };
 		2CBD25B51966CC61001613A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBD25B41966CC61001613A7 /* Foundation.framework */; };
 		2CBD25B71966CC61001613A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBD25B61966CC61001613A7 /* CoreGraphics.framework */; };
 		2CBD25B91966CC61001613A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBD25B81966CC61001613A7 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		2C76A5C81966DA34004D6D80 /* STMCredentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMCredentials.h; sourceTree = "<group>"; };
+		2C76A5C919680680004D6D80 /* AWXMLRequestSerializerFixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWXMLRequestSerializerFixed.h; sourceTree = "<group>"; };
+		2C76A5CA19680680004D6D80 /* AWXMLRequestSerializerFixed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWXMLRequestSerializerFixed.m; sourceTree = "<group>"; };
 		2CBD25B11966CC61001613A7 /* testS3Upload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testS3Upload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CBD25B41966CC61001613A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CBD25B61966CC61001613A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 			children = (
 				2CBD25C31966CC61001613A7 /* STMAppDelegate.h */,
 				2CBD25C41966CC61001613A7 /* STMAppDelegate.m */,
+				2C76A5C919680680004D6D80 /* AWXMLRequestSerializerFixed.h */,
+				2C76A5CA19680680004D6D80 /* AWXMLRequestSerializerFixed.m */,
 				2C76A5C81966DA34004D6D80 /* STMCredentials.h */,
 				2CBD25C61966CC61001613A7 /* Main_iPhone.storyboard */,
 				2CBD25C91966CC61001613A7 /* Main_iPad.storyboard */,
@@ -297,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C76A5CB19680680004D6D80 /* AWXMLRequestSerializerFixed.m in Sources */,
 				2CBD25C11966CC61001613A7 /* main.m in Sources */,
 				2CBD25CE1966CC61001613A7 /* STMViewController.m in Sources */,
 				2CBD25C51966CC61001613A7 /* STMAppDelegate.m in Sources */,

@@ -9,6 +9,8 @@
 #import "STMAppDelegate.h"
 #import <AWSiOSSDKv2/AWSCore.h>
 #import "STMCredentials.h"
+#import <objc/runtime.h>
+#import "AWXMLRequestSerializerFixed.h"
 
 @implementation STMAppDelegate
 
@@ -18,6 +20,12 @@
     AWSServiceConfiguration *configuration = [AWSServiceConfiguration configurationWithRegion:AWSRegionEUWest1 credentialsProvider:credentialsProvider];
     [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
 
+    
+    // Get both the methods from the object by its selectors
+    Method originalMethod = class_getInstanceMethod(NSClassFromString(@"AWSS3RequestSerializer"), @selector(serializeRequest:headers:parameters:error:));
+    Method newMethod = class_getInstanceMethod([AWXMLRequestSerializerFixed class], @selector(__serializeRequest:headers:parameters:error:));
+    method_exchangeImplementations(originalMethod, newMethod);
+    
     
     return YES;
     
