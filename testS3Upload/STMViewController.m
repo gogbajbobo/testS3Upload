@@ -34,8 +34,8 @@
     AWSS3 *transferManager = [[AWSS3 alloc] initWithConfiguration:[AWSServiceManager defaultServiceManager].defaultServiceConfiguration];
     AWSS3PutObjectRequest *photo = [[AWSS3PutObjectRequest alloc] init];
     photo.bucket = @"gkgradus";
-    photo.key = @"test.png";
-    photo.contentType = @"image/png";
+    photo.key = @"test.jpg";
+    photo.contentType = @"image/jpeg";
     photo.body = self.photoData;
     photo.contentLength = [NSNumber numberWithInteger:self.photoData.length];
     
@@ -112,7 +112,8 @@
     
     [picker dismissViewControllerAnimated:NO completion:^{
         
-        self.photoData = UIImagePNGRepresentation([info objectForKey:UIImagePickerControllerOriginalImage]);
+//        self.photoData = UIImagePNGRepresentation([info objectForKey:UIImagePickerControllerOriginalImage]);
+        self.photoData = UIImageJPEGRepresentation([info objectForKey:UIImagePickerControllerOriginalImage], 0.0);
         self.imagePickerController = nil;
         //        NSLog(@"dismiss UIImagePickerController");
         
